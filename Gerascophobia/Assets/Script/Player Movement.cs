@@ -16,8 +16,11 @@ public class PlayerMovement : MonoBehaviour
     
     void Start ()
     {
+        GameData.has_sword = true; 
+
         transform.position = startingPosition.initalValue;
     }
+
 
 
     void Update()
