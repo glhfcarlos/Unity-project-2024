@@ -229,7 +229,7 @@ TilemapRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_ChunkCullingBounds: {x: 0.051724136, y: 0.051724136, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -411,10 +411,14 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -9.295159, y: 2.2376232}
-      - {x: -9.306513, y: -7.7388935}
-      - {x: 8.669769, y: -7.73993}
-      - {x: 8.690168, y: 2.1703224}
+    - - {x: -0.5652186, y: 2.7063215}
+      - {x: -0.57117903, y: 1.2022867}
+      - {x: -1.5154974, y: 1.1155598}
+      - {x: -1.5586901, y: -20.505747}
+      - {x: 1.3558354, y: -20.610111}
+      - {x: 1.3395736, y: 1.1147785}
+      - {x: 0.4605857, y: 1.1393108}
+      - {x: 0.48708963, y: 2.7090313}
   m_UseDelaunayMesh: 0
 --- !u!4 &577650136
 Transform:
@@ -1984,7 +1988,7 @@ MonoBehaviour:
   m_Follow: {fileID: 2009403366}
   m_Lens:
     FieldOfView: 34
-    OrthographicSize: 5.748189
+    OrthographicSize: 0.75
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -7609,7 +7613,7 @@ Transform:
   m_GameObject: {fileID: 827344800}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.30816865, y: -2.75115, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7702,7 +7706,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 5.748189
+  orthographic size: 0.75
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
