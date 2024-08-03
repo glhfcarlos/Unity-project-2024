@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - NPC
   layers:
   - Default
   - TransparentFX
@@ -58,6 +59,9 @@ TagManager:
     locked: 0
   - name: Props above the props above the props
     uniqueID: 225153139
+    locked: 0
+  - name: NPC_infront of player
+    uniqueID: 1013538913
     locked: 0
   - name: Player
     uniqueID: 2644335261
