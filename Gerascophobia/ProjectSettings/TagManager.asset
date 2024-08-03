@@ -62,3 +62,6 @@ TagManager:
   - name: Player
     uniqueID: 2644335261
     locked: 0
+  - name: chairs
+    uniqueID: 3401317907
+    locked: 0
