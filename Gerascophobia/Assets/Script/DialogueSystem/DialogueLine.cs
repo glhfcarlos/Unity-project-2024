@@ -1,7 +1,6 @@
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
-
 
 namespace DialogueSystem
 {
@@ -9,29 +8,34 @@ namespace DialogueSystem
     {
         private Text textHolder;
 
+        [Header ("Text Options")]
+        [SerializeField] private string input;
+        [SerializeField] private Color textColor;
+        [SerializeField] private Font textFont;
 
-                [SerializeField]private string input;
-                [SerializeField]private Color textColor;
-                [SerializeField]private Font textFont;
+        [Header("Time parameters")]
+        [SerializeField] private float delay;
+        [SerializeField] private float delayBetweenLines;
 
-                [Header("Time parameters")]
-                [SerializeField] private float delay; 
-                [Header("Sound")]
-                [SerializeField] private AudioClip sound;
+        [Header("Sound")]
+        [SerializeField] private AudioClip sound;
 
-                [Header("Character Image")]
-                [SerializeField] private Sprite characterSprite;
-                [SerializeField] private Image imageHolder;
+        [Header("Character Image")]
+        [SerializeField] private Sprite characterSprite;
+        [SerializeField] private Image imageHolder;
 
         private void Awake()
         {
             textHolder = GetComponent<Text>();
-            
+            textHolder.text = "";
 
-            StartCoroutine(WriteText(input, textHolder, textColor, textFont, delay, sound));
             imageHolder.sprite = characterSprite;
-            imageHolder.preserveAspect = true; 
+            imageHolder.preserveAspect = true;
+        }
+
+        private void Start()
+        {
+            StartCoroutine(WriteText(input, textHolder, textColor, textFont, delay, sound, delayBetweenLines));
         }
     }
 }
-
