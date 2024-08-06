@@ -4,6 +4,6 @@ using UnityEngine;
 [CreateAssetMenu]
 public class VectorValue : ScriptableObject
 {
-   public Vector2 initalValue;
+   private Vector2 initalValue;
 
 }

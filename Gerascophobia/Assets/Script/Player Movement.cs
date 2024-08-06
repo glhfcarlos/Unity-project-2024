@@ -11,19 +11,10 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
 
-    public VectorValue startingPosition;
-    
+    [SerializeField] private VectorValue startingPosition;    
     Vector2 movement;
     
-    void Start ()
-    {
-        GameData.has_sword = true; 
-
-        transform.position = startingPosition.initalValue;
-    }
-
-
-
+    
     private void Update()
     {
         if (!inDialogue())
@@ -48,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     
-        private bool inDialogue()
+    private bool inDialogue()
     {
         if (npc != null)
             return npc.DialogueActive();
@@ -71,5 +62,6 @@ public class PlayerMovement : MonoBehaviour
     {
         npc = null;
     }
+    
 
 }
