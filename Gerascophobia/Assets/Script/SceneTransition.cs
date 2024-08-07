@@ -13,7 +13,7 @@ public class SceneTransition : MonoBehaviour
     {
         if(Player.CompareTag("Player")  &&  !Player.isTrigger)
         {
-            SceneManager.LoadScene(SceneToLoad);
+            SceneManager.LoadScene(3);
         }
     }
 }

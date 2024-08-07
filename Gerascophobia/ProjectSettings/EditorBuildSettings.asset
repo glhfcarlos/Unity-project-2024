@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/OutSide.unity
     guid: c0eb62c223d8ad34baf6311aef4f5910
   - enabled: 1
+    path: Assets/Scenes/First.unity
+    guid: 6570dd5d09e6b4540b02a22f246edba1
+  - enabled: 1
     path: Assets/Scenes/LoseScreen.unity
     guid: be7611c29f202485ebe7c566282dc0b2
   m_configObjects: {}
