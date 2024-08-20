@@ -69,18 +69,21 @@
     <Compile Include="Assets/Script/Core/SoundManager.cs" />
     <Compile Include="Assets/Script/Player Movement.cs" />
     <Compile Include="Assets/Script/MainMenu.cs" />
+    <Compile Include="Assets/Script/HPBar.cs" />
     <Compile Include="Assets/Script/DialogueSystem/DialogueBaseClass.cs" />
     <Compile Include="Assets/Script/TryAgain.cs" />
     <Compile Include="Assets/Script/Teleport.cs" />
     <Compile Include="Assets/Script/VectorValue.cs" />
     <Compile Include="Assets/Script/NPC/NPC_Controller.cs" />
     <Compile Include="Assets/Script/SceneController.cs" />
+    <Compile Include="Assets/Script/Character Battle.cs" />
     <Compile Include="Assets/Script/Home Screen.cs" />
     <Compile Include="Assets/Script/CharacterMovement.cs" />
     <Compile Include="Assets/Script/BackTeleport.cs" />
     <Compile Include="Assets/Script/GameData.cs" />
     <Compile Include="Assets/Script/HeathManeger.cs" />
     <Compile Include="Assets/Script/DialogueSystem/DialogueHolder.cs" />
+    <Compile Include="Assets/Script/Battle handler.cs" />
     <Compile Include="Assets/Script/DialogueSystem/DialogueLine.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -439,32 +442,40 @@
       <HintPath>/Applications/Unity/Hub/Editor/2022.3.23f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Yarn.System.Text.Encodings.Web">
+      <HintPath>Library/PackageCache/dev.yarnspinner.unity@2.4.2/Runtime/DLLs/Yarn.System.Text.Encodings.Web.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.Collections.LowLevel.ILSupport">
       <HintPath>Library/PackageCache/com.unity.collections@1.2.4/Unity.Collections.LowLevel.ILSupport/Unity.Collections.LowLevel.ILSupport.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-      <HintPath>Library/PackageCache/com.unity.visualscripting@1.9.2/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+    <Reference Include="YarnSpinner.Compiler">
+      <HintPath>Library/PackageCache/dev.yarnspinner.unity@2.4.2/Runtime/DLLs/YarnSpinner.Compiler.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="ReportGeneratorMerged">
       <HintPath>Library/PackageCache/com.unity.testtools.codecoverage@1.2.5/lib/ReportGenerator/ReportGeneratorMerged.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Yarn.System.Text.Json">
-      <HintPath>Library/PackageCache/dev.yarnspinner.unity@2.4.2/Runtime/DLLs/Yarn.System.Text.Json.dll</HintPath>
+    <Reference Include="YarnSpinner">
+      <HintPath>Library/PackageCache/dev.yarnspinner.unity@2.4.2/Runtime/DLLs/YarnSpinner.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Yarn.Microsoft.Win32.SystemEvents">
+      <HintPath>Library/PackageCache/dev.yarnspinner.unity@2.4.2/Runtime/DLLs/Yarn.Microsoft.Win32.SystemEvents.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Yarn.System.Drawing.Common">
       <HintPath>Library/PackageCache/dev.yarnspinner.unity@2.4.2/Runtime/DLLs/Yarn.System.Drawing.Common.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="YarnSpinner">
-      <HintPath>Library/PackageCache/dev.yarnspinner.unity@2.4.2/Runtime/DLLs/YarnSpinner.dll</HintPath>
+    <Reference Include="Yarn.System.IO.Packaging">
+      <HintPath>Library/PackageCache/dev.yarnspinner.unity@2.4.2/Runtime/DLLs/Yarn.System.IO.Packaging.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Yarn.System.Text.Encodings.Web">
-      <HintPath>Library/PackageCache/dev.yarnspinner.unity@2.4.2/Runtime/DLLs/Yarn.System.Text.Encodings.Web.dll</HintPath>
+    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
+      <HintPath>Library/PackageCache/com.unity.visualscripting@1.9.2/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Yarn.Microsoft.Bcl.AsyncInterfaces">
@@ -479,16 +490,8 @@
       <HintPath>Library/PackageCache/dev.yarnspinner.unity@2.4.2/Runtime/DLLs/Yarn.Microsoft.Extensions.FileSystemGlobbing.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="YarnSpinner.Compiler">
-      <HintPath>Library/PackageCache/dev.yarnspinner.unity@2.4.2/Runtime/DLLs/YarnSpinner.Compiler.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Yarn.System.IO.Packaging">
-      <HintPath>Library/PackageCache/dev.yarnspinner.unity@2.4.2/Runtime/DLLs/Yarn.System.IO.Packaging.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Yarn.Microsoft.Win32.SystemEvents">
-      <HintPath>Library/PackageCache/dev.yarnspinner.unity@2.4.2/Runtime/DLLs/Yarn.Microsoft.Win32.SystemEvents.dll</HintPath>
+    <Reference Include="Yarn.System.Text.Json">
+      <HintPath>Library/PackageCache/dev.yarnspinner.unity@2.4.2/Runtime/DLLs/Yarn.System.Text.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
@@ -1067,16 +1070,16 @@
       <HintPath>Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.TestTools.CodeCoverage.Editor">
+      <HintPath>Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.Collections">
       <HintPath>Library/ScriptAssemblies/Unity.Collections.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Formats.Fbx.Editor">
       <HintPath>Library/ScriptAssemblies/Unity.Formats.Fbx.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.TestTools.CodeCoverage.Editor">
-      <HintPath>Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.2D.SpriteShape.Runtime">
@@ -1103,12 +1106,12 @@
       <HintPath>Library/ScriptAssemblies/Unity.Recorder.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.VSCode.Editor">
-      <HintPath>Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
       <HintPath>Library/ScriptAssemblies/Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.VSCode.Editor">
+      <HintPath>Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Editor">
@@ -1243,16 +1246,16 @@
       <HintPath>Library/ScriptAssemblies/Autodesk.Fbx.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="YarnSpinner.Unity">
+      <HintPath>Library/ScriptAssemblies/YarnSpinner.Unity.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.VisualScripting.State.Editor">
       <HintPath>Library/ScriptAssemblies/Unity.VisualScripting.State.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Autodesk.Fbx.Editor">
       <HintPath>Library/ScriptAssemblies/Autodesk.Fbx.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="YarnSpinner.Unity">
-      <HintPath>Library/ScriptAssemblies/YarnSpinner.Unity.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Formats.Alembic.Runtime">

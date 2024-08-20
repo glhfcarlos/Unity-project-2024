@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
 
     [SerializeField] private VectorValue startingPosition;    
-    Vector2 movement;
+    public Vector2 movement;
     
     
     private void Update()
@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
             movement.y = Input.GetAxisRaw("Vertical");
         }
         if (movement.x != 0  || movement.y != 0){
-                    
+                    Debug.Log("I am moving");
                     animator.SetFloat("Horizontal", movement.x);
                     animator.SetFloat("Vertical", movement.y);
 
