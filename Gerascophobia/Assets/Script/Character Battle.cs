@@ -8,7 +8,7 @@ public class CharacterBattle : MonoBehaviour {
    private void Awake () {
     playermovement = GetComponent<PlayerMovement>();
    }
-    private void Update() {
-        playermovement.movement = new Vector2(0.25f,0);
+    private void Start() {
+        PlayerMovement.movement.x(new Vector3(1,0));
     }
 } 
