@@ -12,25 +12,26 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
 
     [SerializeField] private VectorValue startingPosition;    
-    Vector2 movement;
+    public Vector2 movement;
     
     
     private void Update()
     {
+        Debug.Log(movement.x);
         if (!inDialogue())
         {
             movement.x = Input.GetAxisRaw("Horizontal");
             movement.y = Input.GetAxisRaw("Vertical");
         }
         if (movement.x != 0  || movement.y != 0){
-                    
-                    animator.SetFloat("Horizontal", movement.x);
-                    animator.SetFloat("Vertical", movement.y);
+            animator.SetFloat("Horizontal", movement.x);
+            animator.SetFloat("Vertical", movement.y);
 
-                    animator.SetBool("IsWalking", true);
-                    } else{
-                        animator.SetBool("IsWalking", false);
-                    }
+            animator.SetBool("IsWalking", true);
+            } 
+        else {
+                animator.SetBool("IsWalking", false);
+            }
     }
 
     void FixedUpdate()
