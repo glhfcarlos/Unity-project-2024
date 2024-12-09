@@ -133,6 +133,8 @@ GameObject:
   m_Component:
   - component: {fileID: 59180354}
   - component: {fileID: 59180353}
+  - component: {fileID: 59180356}
+  - component: {fileID: 59180355}
   m_Layer: 0
   m_Name: Hina Idle Front
   m_TagString: Untagged
@@ -207,6 +209,78 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &59180355
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59180352}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.028354406, y: -0.08506292}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.28, y: 1.28}
+    newSize: {x: 1.28, y: 1.28}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.5427892, y: 1.1098741}
+  m_EdgeRadius: 0
+--- !u!50 &59180356
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59180352}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &221384997
 GameObject:
   m_ObjectHideFlags: 0
@@ -526,8 +600,9 @@ PolygonCollider2D:
       - {x: -1.5586901, y: -20.505747}
       - {x: 1.3558354, y: -20.610111}
       - {x: 1.3395736, y: 1.1147785}
-      - {x: 0.4605857, y: 1.1393108}
-      - {x: 0.48708963, y: 2.7090313}
+      - {x: 0.6597104, y: 0.781306}
+      - {x: 0.7272395, y: 2.5792418}
+      - {x: 0.3804283, y: 2.4957087}
   m_UseDelaunayMesh: 0
 --- !u!4 &577650136
 Transform:
@@ -1598,7 +1673,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 19
-      m_TileSpriteIndex: 4
+      m_TileSpriteIndex: 3
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1727,12 +1802,8 @@ Tilemap:
     m_Data: {fileID: 2113486161, guid: 8a7eab0ae13edd44cb0486bc0ea842cb, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: -440031225, guid: 8a7eab0ae13edd44cb0486bc0ea842cb, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: -1983494582, guid: 8a7eab0ae13edd44cb0486bc0ea842cb, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
   m_TileMatrixArray:
   - m_RefCount: 51
     m_Data:
