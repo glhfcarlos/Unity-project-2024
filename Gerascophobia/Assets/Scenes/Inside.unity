@@ -2392,7 +2392,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 407047138}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f453f694addf4275988fac205bc91968, type: 3}
   m_Name: 
@@ -2749,14 +2749,14 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 14.797965, y: 5.8130407}
-      - {x: 1.8310902, y: 5.7713766}
-      - {x: 1.9079177, y: 4.957611}
-      - {x: -6.037552, y: 4.8908668}
+    - - {x: 14.8968525, y: 5.663227}
+      - {x: 1.77684, y: 5.677357}
+      - {x: 1.6878283, y: 4.9002733}
+      - {x: -6.2098007, y: 5.023347}
       - {x: -6.3307505, y: -5.3984494}
       - {x: 3.7945442, y: -5.5617833}
       - {x: 14.955408, y: -5.455324}
-      - {x: 14.876657, y: 4.8595734}
+      - {x: 14.902179, y: 4.8595734}
   m_UseDelaunayMesh: 0
 --- !u!4 &747327344
 Transform:
