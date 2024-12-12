@@ -59,7 +59,7 @@
     <UnityVersion>2022.3.23f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="/Users/sarabygalvan/.vscode/extensions/visualstudiotoolsforunity.vstuc-1.0.2/Analyzers/Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="/Users/sarabygalvan/.vscode/extensions/visualstudiotoolsforunity.vstuc-1.0.5/Analyzers/Microsoft.Unity.Analyzers.dll" />
     <Analyzer Include="/Users/sarabygalvan/Documents/GitHub/Unity-project-2024/Gerascophobia/Library/PackageCache/dev.yarnspinner.unity@2.4.2/SourceGenerator/YarnSpinner.Unity.SourceCodeGenerator.dll" />
     <Analyzer Include="/Applications/Unity/Hub/Editor/2022.3.23f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll" />
     <Analyzer Include="/Applications/Unity/Hub/Editor/2022.3.23f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
