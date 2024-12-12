@@ -60,10 +60,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Analyzer Include="/Users/sarabygalvan/.vscode/extensions/visualstudiotoolsforunity.vstuc-1.0.5/Analyzers/Microsoft.Unity.Analyzers.dll" />
-<<<<<<< Updated upstream
     <Analyzer Include="/Users/sarabygalvan/Documents/GitHub/Unity-project-2024/Gerascophobia/Library/PackageCache/dev.yarnspinner.unity@2.4.2/SourceGenerator/YarnSpinner.Unity.SourceCodeGenerator.dll" />
-=======
->>>>>>> Stashed changes
     <Analyzer Include="/Applications/Unity/Hub/Editor/2022.3.23f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll" />
     <Analyzer Include="/Applications/Unity/Hub/Editor/2022.3.23f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
@@ -72,32 +69,21 @@
     <Compile Include="Assets/Script/Core/SoundManager.cs" />
     <Compile Include="Assets/Script/Player Movement.cs" />
     <Compile Include="Assets/Script/MainMenu.cs" />
-<<<<<<< Updated upstream
     <Compile Include="Assets/Script/HPBar.cs" />
     <Compile Include="Assets/Script/DialogueSystem/DialogueBaseClass.cs" />
     <Compile Include="Assets/Script/TryAgain.cs" />
-=======
-    <Compile Include="Assets/Script/DialogueSystem/DialogueBaseClass.cs" />
->>>>>>> Stashed changes
     <Compile Include="Assets/Script/Teleport.cs" />
     <Compile Include="Assets/Script/VectorValue.cs" />
     <Compile Include="Assets/Script/NPC/NPC_Controller.cs" />
     <Compile Include="Assets/Script/SceneController.cs" />
-<<<<<<< Updated upstream
     <Compile Include="Assets/Script/Character Battle.cs" />
     <Compile Include="Assets/Script/Home Screen.cs" />
     <Compile Include="Assets/Script/CharacterMovement.cs" />
-=======
-    <Compile Include="Assets/Script/Home Screen.cs" />
->>>>>>> Stashed changes
     <Compile Include="Assets/Script/BackTeleport.cs" />
     <Compile Include="Assets/Script/GameData.cs" />
     <Compile Include="Assets/Script/HeathManeger.cs" />
     <Compile Include="Assets/Script/DialogueSystem/DialogueHolder.cs" />
-<<<<<<< Updated upstream
     <Compile Include="Assets/Script/Battle handler.cs" />
-=======
->>>>>>> Stashed changes
     <Compile Include="Assets/Script/DialogueSystem/DialogueLine.cs" />
   </ItemGroup>
   <ItemGroup>
